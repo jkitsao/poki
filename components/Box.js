@@ -10,6 +10,7 @@ function Box({
   pokiPreview,
   setMessage,
   handleSubmit,
+  loading,
 }) {
   const url = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png";
   return (
@@ -81,8 +82,9 @@ function Box({
                 <button
                   className="w-full py-3 bg-pink-400 text-white rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent shadow-lg"
                   type="submit"
+                  disabled={loading}
                 >
-                  Create message
+                  {!loading ? "Create message" : <Spinner />}
                 </button>
               </div>
             </div>

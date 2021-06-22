@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-const connection_prod = process.env.MONGODB_PROD;
+const connection_prod =
+  "mongodb+srv://tipjarr:jacksonkitsaofujo@tipjarr-production.ysusw.mongodb.net/tipjarr?retryWrites=true&w=majority";
 const connection_dev = "mongodb://localhost:27017/pokidb";
 const connection_string =
   process.env.NODE_ENV === "production" ? connection_prod : connection_dev;
@@ -37,7 +38,7 @@ export default async (req, res) => {
           return res
             .status(404)
             .json({ message: "poki not available", poki: null });
-        // console.log(poki);
+        console.log(poki);
         res.status(200).json(poki);
       }
     });

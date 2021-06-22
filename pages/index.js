@@ -14,11 +14,13 @@ export default function Home({ pokemon }) {
   const [pokiPreview, setPokiPreview] = useState({});
   const [message, setMessage] = useState("");
   const [pokiLink, setPokiLink] = useState(null);
+  const [loading, setLoading] = useState(null);
   const router = useRouter();
   //function to handle form submission
   const handleSubmit = (e) => {
     if (!pokimon || !message) return;
     e.preventDefault();
+    setLoading(true);
     const data = {
       poki: pokimon,
       pokiId: nanoid(10),
@@ -30,9 +32,11 @@ export default function Home({ pokemon }) {
         // console.log(response);
         // const link = `localhost:3000/${res.data.poki_id}`;
         // setPokiLink(link);
+        setLoading(false);
         return router.push(`/${res.data.poki_id}`);
       })
       .catch((err) => {
+        setLoading(false);
         throw err;
         // console.log(err)
         // return toast({
@@ -53,6 +57,7 @@ export default function Home({ pokemon }) {
         pokiPreview={pokiPreview}
         setMessage={setMessage}
         handleSubmit={handleSubmit}
+        loading={loading}
       />
       {/* {JSON.stringify(pokimon)} */}
     </div>
