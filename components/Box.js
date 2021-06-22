@@ -71,7 +71,7 @@ function Box({
               <div className="">
                 <textarea
                   className="description bg-gray-100 w-full sec p-3 h-32 border border-gray-300 text-sm outline-none"
-                  spellcheck="false"
+                  // spellCheck="false"
                   placeholder="Describe everything about this post here"
                   onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
