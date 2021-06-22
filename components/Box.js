@@ -2,7 +2,7 @@ import React from "react";
 import AuthIcons from "../components/AuthIcons";
 import Pokimodal from "./Pokimodal";
 import Image from "next/image";
-
+import { Spinner } from "@chakra-ui/react";
 function Box({
   pokemon,
   setPokimon,
@@ -35,14 +35,14 @@ function Box({
                 }
                 alt="pokemon"
                 width="450"
-                height="250"
+                height="400"
                 className=" max-h-72 object-cover"
               />
 
               {pokiPreview?.name && (
-                <div class="-mt-12">
-                  <div class="inline-flex items-center bg-black leading-none text-yellow-400 rounded-full p-2 shadow text-sm">
-                    <span class="inline-flex px-2 font-semibold">
+                <div className="-mt-6">
+                  <div className="inline-flex items-center bg-black leading-none text-yellow-400 rounded-full p-2 shadow text-sm">
+                    <span className="inline-flex px-2 font-semibold">
                       {pokiPreview?.name && pokiPreview?.name}
                     </span>
                   </div>
@@ -82,7 +82,7 @@ function Box({
                   className="w-full py-3 bg-pink-400 text-white rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent shadow-lg"
                   type="submit"
                 >
-                  Send message
+                  Create message
                 </button>
               </div>
             </div>

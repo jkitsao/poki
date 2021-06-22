@@ -7,15 +7,15 @@ function Poki({ data }) {
 
   return (
     <div
-      className=" min-h-screen pb-8 grad pt-10 lg:pt-16"
+      className="h-screen min-h-full pb-8 grad pt-5 lg:pt-16"
       style={{ width: "100vw" }}
     >
       {/* {data} */}
       <main id="app">
-        <section class="cards">
+        <section className="cards">
           {/* <div class="card charizard"></div> */}
           <div
-            class="card pika"
+            className="card pika"
             //  background-image: url(https://assets.pokemon.com/assets/cms2/img/pokedex/full/123.png);
             style={{ backgroundImage: `url(${Background ? Background : bg})` }}
           >
@@ -29,17 +29,17 @@ function Poki({ data }) {
             {/* <h1 className="text-2xl font-semibold text-center text-white">
             Pokemon Card, Holo Effect
           </h1> */}
-            <article class="alert error">
-              <div class="alert__wrapper">
-                <div class="alert__header">
+            <article className="alert error">
+              <div className="alert__wrapper">
+                <div className="alert__header">
                   <h3>
                     <span>
-                      <i class="fa fa-exclamation-circle"></i>
+                      <i className="fa fa-exclamation-circle"></i>
                     </span>
                     <span>{data?.poki?.name} says </span>
                   </h3>
                 </div>
-                <div class="alert__body overflow-y-scroll max-h-64 whitespace-pre-wrap">
+                <div className="alert__body overflow-y-scroll max-h-64 whitespace-pre-wrap">
                   <p>{data?.message}</p>
                 </div>
               </div>
@@ -47,7 +47,7 @@ function Poki({ data }) {
           </section>
         )}
 
-        <style class="hover"></style>
+        <style className="hover"></style>
       </main>
     </div>
   );

@@ -29,17 +29,18 @@ export default function Home({ pokemon }) {
       .then(function (res) {
         // console.log(response);
         // const link = `localhost:3000/${res.data.poki_id}`;
-        setPokiLink(link);
+        // setPokiLink(link);
         return router.push(`/${res.data.poki_id}`);
       })
       .catch((err) => {
+        throw err;
         // console.log(err)
-        return toast({
-          title: `${"error"} `,
-          status: err.message,
-          isClosable: true,
-          position: "top",
-        });
+        // return toast({
+        //   title: `${"error"} `,
+        //   status: err.message,
+        //   isClosable: true,
+        //   position: "top",
+        // });
       });
   };
 

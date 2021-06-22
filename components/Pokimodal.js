@@ -17,7 +17,7 @@ function Pokimodal({ pokemon, setPokimon, setPokiPreview }) {
     <>
       {/* <Button onClick={onOpen}>Choose pokemon</Button> */}
       <button
-        class="bg-purple-500 px-5 py-3 text-sm shadow-sm font-medium tracking-wider border text-purple-100 rounded-full hover:shadow-lg hover:bg-purple-600"
+        className="bg-purple-500 px-5 py-3 text-sm shadow-sm font-medium tracking-wider border text-purple-100 rounded-full hover:shadow-lg hover:bg-purple-600"
         onClick={onOpen}
         type="button"
       >
