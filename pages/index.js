@@ -33,7 +33,7 @@ export default function Home({ pokemon }) {
         // const link = `localhost:3000/${res.data.poki_id}`;
         // setPokiLink(link);
         setLoading(false);
-        return router.push(`/${res.data.poki_id}`);
+        router.push(`/${res.data.poki_id}`);
       })
       .catch((err) => {
         setLoading(false);
