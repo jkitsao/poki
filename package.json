@@ -9,9 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/react": "^1.6.4",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "@sendgrid/mail": "^7.4.5",
+    "autoprefixer": "^10.2.6",
+    "framer-motion": "^4",
     "next": "11.0.0",
+    "postcss": "^8.3.5",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "tailwindcss": "^2.2.2"
   },
   "devDependencies": {
     "eslint": "7.29.0",

@@ -1,21 +1,24 @@
 import Head from "next/head";
 import Image from "next/image";
 import { nanoid } from "nanoid";
-import axios from "axios";
 import { useRouter } from "next/router";
+
+import axios from "axios";
 import { useToast } from "@chakra-ui/react";
 // import styles from "../styles/Home.module.css";
 import Box from "../components/Box";
 import AuthIcons from "../components/AuthIcons";
 import { useState } from "react";
 export default function Home({ pokemon }) {
-  const toast = useToast();
+  // const toast = useToast();
   const [pokimon, setPokimon] = useState({});
   const [pokiPreview, setPokiPreview] = useState({});
   const [message, setMessage] = useState("");
   const [pokiLink, setPokiLink] = useState(null);
   const router = useRouter();
-  //function to handle form submission
+  const toast = useToast();
+
+  //function to handle form submissionsss
   const handleSubmit = (e) => {
     if (!pokimon || !message) return;
     e.preventDefault();
@@ -29,17 +32,19 @@ export default function Home({ pokemon }) {
       .then(function (res) {
         // console.log(response);
         // const link = `localhost:3000/${res.data.poki_id}`;
-        setPokiLink(link);
+        // setPokiLink(link);
+        // alert(pokiLink);
         return router.push(`/${res.data.poki_id}`);
       })
       .catch((err) => {
         // console.log(err)
-        return toast({
-          title: `${"error"} `,
-          status: err.message,
-          isClosable: true,
-          position: "top",
-        });
+        // toast({
+        //   title: `${"error"} `,
+        //   status: err.message,
+        //   isClosable: true,
+        //   position: "top",
+        // });
+        throw err;
       });
   };
 
