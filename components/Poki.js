@@ -6,7 +6,10 @@ function Poki({ data }) {
     "http://www.i2softbd.com/template/TPL-007/images/404-Page-Not-Found.png";
 
   return (
-    <div className=" pb-8 grad pt-5 lg:pt-16" style={{ width: "100vw" }}>
+    <div
+      className=" min-h-screen pb-8 grad pt-5 lg:pt-16"
+      style={{ width: "100vw" }}
+    >
       {/* {data} */}
       <div className="text-sm p-2 text-center text-gray-600 cursor-pointer bg-gray-100 rounded m-3 max-w-sm overflow-x-auto   fixed bottom-0  flex">
         <svg
@@ -23,7 +26,9 @@ function Poki({ data }) {
             d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
           />
         </svg>
-        <span className="hover:text-blue-600">{window.location.href}</span>
+        <span className="hover:text-blue-600">
+          {typeof window !== "undefined" && window.location.href}
+        </span>
       </div>
 
       <main id="app" className="mb-8">
