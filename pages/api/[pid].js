@@ -4,11 +4,14 @@ const connection_prod =
 const connection_dev = "mongodb://localhost:27017/pokidb";
 const connection_string =
   process.env.NODE_ENV === "production" ? connection_prod : connection_dev;
-mongoose.connect(connection_string, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-});
+mongoose.connect(
+  "mongodb+srv://tipjarr:jacksonkitsaofujo@tipjarr-production.ysusw.mongodb.net/tipjarr?retryWrites=true&w=majority",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+  }
+);
 
 const pokiSchema = {
   poki_id: String,
