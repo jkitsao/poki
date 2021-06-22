@@ -320,7 +320,7 @@ body {
 
 
 
-
+/* 
 ::-webkit-scrollbar {
  width: 13px;
  height: 13px;
@@ -336,4 +336,12 @@ body {
  background: #ffffff;
  border-radius: 10px;
  box-shadow: inset 7px 10px 12px #f0f0f0;
+} */
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
 }
