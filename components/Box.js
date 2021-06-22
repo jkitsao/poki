@@ -1,6 +1,8 @@
 import React from "react";
 import AuthIcons from "../components/AuthIcons";
 import Pokimodal from "./Pokimodal";
+import Image from "next/image";
+
 function Box({
   pokemon,
   setPokimon,
@@ -20,12 +22,21 @@ function Box({
             <AuthIcons />
           </div> */}
             <div className=" bg-yellow-200 rounded-tl-2xl rounded-tr-2xl text-center">
-              <img
+              {/* <img
                 src={
                   pokiPreview && pokiPreview?.image ? pokiPreview?.image : url
                 }
                 className=" max-h-72 object-cover"
                 style={{ minWidth: "30rem" }}
+              /> */}
+              <Image
+                src={
+                  pokiPreview && pokiPreview?.image ? pokiPreview?.image : url
+                }
+                alt="pokemon"
+                width="450"
+                height="250"
+                className=" max-h-72 object-cover"
               />
 
               {pokiPreview?.name && (
