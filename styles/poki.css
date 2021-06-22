@@ -2,7 +2,7 @@
 
 
 .grad {
-  height: 100vh;
+  /* height: 100vh; */
    background: linear-gradient(90deg,#3d0a1d,#010044);
 
 }
