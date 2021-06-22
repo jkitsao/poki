@@ -57,7 +57,7 @@ export default async (req, res) => {
       await doc.save();
       return res.status(200).json(doc);
     }
-    return res.status(400).json({ error: { message: "bad request" } });
+    return res.status(400).json({ message: "bad request" });
     // console.log(req.body);
   }
 };

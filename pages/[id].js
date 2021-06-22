@@ -2,7 +2,10 @@ import React from "react";
 import Poki from "../components/Poki";
 function page({ data }) {
   //   return <div>{JSON.stringify(data)}</div>;
-  return <Poki data={data} />;
+  if (data) return <Poki data={data} />;
+  return (
+    <div className="min-h-screen bg-black" style={{ width: "100vw" }}></div>
+  );
 }
 
 export default page;

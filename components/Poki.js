@@ -11,6 +11,24 @@ function Poki({ data }) {
       style={{ width: "100vw" }}
     >
       {/* {data} */}
+      <div className="text-sm p-2 text-center text-gray-600 cursor-pointer bg-gray-100 rounded mx-3 w-64 mx-auto flex">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-5 w-5 mx-1 text-gray-400"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+          />
+        </svg>
+        <span className="hover:text-blue-600">{window.location.href}</span>
+      </div>
+
       <main id="app">
         <section className="cards">
           {/* <div class="card charizard"></div> */}
