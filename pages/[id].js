@@ -9,7 +9,7 @@ export default page;
 export async function getServerSideProps({ query }) {
   try {
     const { id } = query;
-    const res = await fetch(`http://localhost:3000/api/${id}`);
+    const res = await fetch(`https://poki-mu.vercel.app/${id}`);
     const data = await res.json();
 
     return {
